@@ -130,9 +130,9 @@ li{
 	left: 50%;
 	transform: translateX(-50%);
 	bottom: 0px;
-	font-size: 26px;
+	font-size: 22px;
 	text-align: left;
-	color: black;
+	color: white;
 	/*text-decoration: none;*/
 }
 .channels *{
@@ -147,10 +147,13 @@ li{
 	height: 20px;
 }
 .text{
+	/*border: solid 1px white;*/
+	width: 117px;
 	right: 0px;
 	top: 8px;
 	font-size: 20px;
 	letter-spacing: 5px;
+	color: white;
 }
 .choseTag{
 	letter-spacing: 0px;

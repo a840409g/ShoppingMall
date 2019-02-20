@@ -1,7 +1,7 @@
 const clien_id = 'rgzxq2n5g3w2pnd4qrhwlx0wxrmgbc';
 const limit = 100;
 const twitchAPI = 'https://api.twitch.tv/kraken/streams/?client_id=' + clien_id + '&limit=' + limit;
-const test = "https://api.twitch.tv/kraken/streams/yuniko0720/?client_id="+clien_id;
+// const test = "https://api.twitch.tv/kraken/streams/yuniko0720/?client_id="+clien_id;
 console.log(twitchAPI)
 $.ajax({
 	url: twitchAPI,
@@ -15,15 +15,13 @@ $.ajax({
 					"<img class='bgi' src='"+ary.bgi+"'>"+
 					"<img class='logo' src='"+ary.logo+"'>"+
 					"<p class='name'>"+ ary.name +"</p>"+
-					"<p class='game'>"+'正在玩'+ ary.game +"</p>"+
+					"<p class='game'>"+'正在玩:'+ ary.game +"</p>"+
 					"<div class='light'>"+"</div>"+
-					"<div class='text'>"+"OFFLONE"+"</div>"+
+					"<div class='text'>"+"ONLINE"+"</div>"+
 					"<a class='status' href='"+ary.url+"'>"+ ary.status + "</a>"+
 					"</div>";
 					return content;
 			}
-		// console.log(res);
-		// console.log(stream);
 		for(let i=0;i<len;i++){
 			let channel = stream[i].channel;
 			let lan = channel.broadcaster_language;
@@ -44,8 +42,18 @@ $.ajax({
 			};
 			content = strHtml(channelAry);
 			str+=content;
-			console.log(str);
 			$('.channel_list').html(str);
+			$('.cata').click(function(e) {
+				let value = e.target.dataset.text;
+				$('.channel_list').html("");
+				// console.log(value);
+				if( value == game){
+					content = strHtml(channelAry);
+					str+=content;
+					$('.channel_list').html(str);
+					console.log(game);
+				}
+			});
 		}
 	}
 });
