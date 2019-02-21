@@ -31,6 +31,29 @@ li{
 	margin: 0px 10px;
 	width: 100%;
 	display: inline-block;
+	/*position: relative;*/
+}
+#header .container .search{
+	position: absolute;
+	top: 0px;
+	right: 50px;
+}
+#header .container .search *{
+	height: 30px;
+	line-height: 0px;
+}
+#header .container .search .seaText{
+	width: 300px;
+}
+#header .container .search .seaBtn:before{
+	color: black;
+	position: absolute;
+	top: 50%;
+	right: 5%;
+	cursor: pointer;
+}
+#header .container .search .seaBtn:hover{
+	font-size: 18px;
 }
 #header .container .title{
 	font-size: 36px;
