@@ -79,7 +79,7 @@ li{
 	width: 800px;
 	height: 30px;
 	line-height: 30px;
-	display: none;
+	display: inline-flex;
 	justify-content: space-around;
 }
 .cata span{
@@ -88,9 +88,9 @@ li{
 	text-align: center;
 	cursor: pointer;
 }
-#header:hover .cata{
+/*#header:hover .cata{
 	display: inline-flex;
-}
+}*/
 #header .cata span:hover {
 	text-decoration: none;
 	background-color: #4b367c;
