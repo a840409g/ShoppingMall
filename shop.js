@@ -93,6 +93,7 @@ $.ajax({
 					// console.log(str);
 					$('.channel_list').html(str)
 				}
+				$('.seaText').val("")
 			})
 		});
 	}
